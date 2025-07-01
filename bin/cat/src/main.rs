@@ -17,7 +17,8 @@ fn main() {
     match fs::read_to_string(&args.file) {
         Ok(contents) => print!("{}", contents),
         Err(e) => {
-            eprintln!("Error reading file '{}': {}", args.file, e);
+            eprintln!(
+                "Error reading file '{}': {}", args.file, e);
             process::exit(1);
         }
     }

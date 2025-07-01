@@ -1,1 +1,2 @@
-cat Makefile | /usr/bin/grep test
+echo "junk" > cat_junk.txt
+cat cat_junk.txt | /usr/bin/grep junk > /dev/null

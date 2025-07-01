@@ -1,1 +1,2 @@
-ls . | /usr/bin/grep Cargo.toml > /dev/null
+/usr/bin/touch hello
+ls . | /usr/bin/grep hello > /dev/null
