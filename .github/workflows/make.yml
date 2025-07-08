@@ -1,0 +1,28 @@
+name: Makefile
+
+on:
+  push:
+    branches: [ trunk ]
+  pull_request:
+    branches: [ trunk ]
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [macos-15, macos-14, macos-13]
+      
+    runs-on: ${{ matrix.os }}
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: System Information
+      run: |
+        echo "🍎 Running on: ${{ matrix.os }}"
+        sw_vers
+        uname -a
+        
+    - name: Run tests
+      run: make test
