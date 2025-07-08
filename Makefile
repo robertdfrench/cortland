@@ -20,8 +20,8 @@ test_%: #: Run an individual test for '%'
 	man ./usr/share/man/man1/$*.1
 
 %.skel: #: Make a skeleton for '%' (path)
-	# cargo new --bin $*
-	# cargo add --package $(notdir $*) clap --features derive
+	cargo new --bin $*
+	cargo add --package $(notdir $*) clap --features derive
 	echo "exit 1" \
 		> harness/test_$(notdir $*).sh
 
