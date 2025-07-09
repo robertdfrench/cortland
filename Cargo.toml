@@ -1,3 +1,3 @@
 [workspace]
 resolver = "3"
-members = ["bin/cat", "bin/cp", "bin/ln","bin/ls", "bin/mv", "bin/ps", "bin/rm", "usr/bin/seq", "usr/bin/touch", "usr/bin/whoami", "usr/bin/yes"]
+members = ["bin/cat", "bin/cp", "bin/ln","bin/ls", "bin/mkdir", "bin/mv", "bin/ps", "bin/rm", "usr/bin/seq", "usr/bin/touch", "usr/bin/whoami", "usr/bin/yes"]
